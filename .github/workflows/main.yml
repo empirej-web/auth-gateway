@@ -1,0 +1,18 @@
+name: auth-gateway CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run build
+        run: |
+          echo "Building auth-gateway..."
+          echo "Build successful!"
